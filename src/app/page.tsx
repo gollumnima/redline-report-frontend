@@ -1,29 +1,29 @@
-'use client'
-import React, { useState } from 'react'
-import { ArrowRight } from 'lucide-react'
-import { useRouter } from 'next/navigation'
+"use client";
+import React, { useState } from "react";
+import { ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function HomePage() {
-  const [title, setTitle] = useState<string>('')
-  const [isAnalyzing, setIsAnalyzing] = useState<boolean>(false)
-  const router = useRouter()
+  const [title, setTitle] = useState<string>("");
+  const [isAnalyzing, setIsAnalyzing] = useState<boolean>(false);
+  const router = useRouter();
 
   const analyzeTitle = async (): Promise<void> => {
-    if (!title.trim()) return
-    
-    setIsAnalyzing(true)
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    
-    const score = Math.floor(Math.random() * 40) + 60
-    
+    if (!title.trim()) return;
+
+    setIsAnalyzing(true);
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
+    const score = Math.floor(Math.random() * 40) + 60;
+
     const params = new URLSearchParams({
       title: title,
       score: score.toString(),
-      timestamp: new Date().toISOString()
-    })
-    
-    router.push(`/result?${params.toString()}`)
-  }
+      timestamp: new Date().toISOString(),
+    });
+
+    router.push(`/result?${params.toString()}`);
+  };
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-8">
@@ -36,10 +36,13 @@ export default function HomePage() {
             기사 제목을 입력하면 젠더감수성 점수를 분석해드립니다
           </p>
         </div>
-        
+
         <div className="space-y-6">
           <div>
-            <label htmlFor="title" className="block text-sm font-medium text-gray-700 mb-2">
+            <label
+              htmlFor="title"
+              className="block text-sm font-medium text-gray-700 mb-2"
+            >
               기사 제목
             </label>
             <textarea
@@ -52,7 +55,7 @@ export default function HomePage() {
               disabled={isAnalyzing}
             />
           </div>
-          
+
           <button
             onClick={analyzeTitle}
             disabled={!title.trim() || isAnalyzing}
@@ -79,7 +82,7 @@ export default function HomePage() {
         <div className="space-y-3">
           {[
             "경호원과 눈맞은 현직 女시장…여행에 ‘세비 1억’ 썼다",
-            "20대 여경이 대낮 흉기 들고 도심 활보", 
+            "20대 여경이 대낮 흉기 들고 도심 활보",
           ].map((example, index) => (
             <button
               key={index}
@@ -92,5 +95,5 @@ export default function HomePage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

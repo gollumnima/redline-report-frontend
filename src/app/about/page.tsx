@@ -1,5 +1,11 @@
 import Link from "next/link";
 import ProfileCard from "~/components/ProfileCard";
+import { generateSEO } from '~/utils/seo'
+
+export const metadata = generateSEO({
+  title: "RedLine Report | 프로젝트 소개",
+  url: "https://redline-report.com/about"
+})
 
 export default function AboutPage() {
   return (
@@ -9,7 +15,6 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             프로젝트 소개
           </h2>
-
           <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-6">
             <p>
               여성은 오랫동안 사회에서 제대로 주목받지 못해왔다. 아이러니하게도
