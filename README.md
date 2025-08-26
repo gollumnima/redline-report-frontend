@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Red Line Report
 
-## Getting Started
+> 더 나은 미디어 환경을 위한 작은 발걸음
 
-First, run the development server:
+Red Line Report는 기사 제목의 사회적 감수성을 분석하는 웹 애플리케이션입니다. 언론이 스스로 넘어서는 안 될 선(red line)을 점검하도록 돕는 것이 목표입니다.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 프로젝트 소개
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+여성은 오랫동안 사회에서 제대로 주목받지 못해왔습니다. 아이러니하게도 기사 제목 속에서만 예외가 존재합니다. 하루가 멀다 하고 '女, 女, 女'라는 표현이 난무하지만, 정작 여성의 목소리와 권리는 필요한 순간에 배제됩니다. 존재를 존중하지 않으면서도 소비 가능한 소재로만 활용하는 언론의 태도는 우리 사회의 구조적 문제를 적나라하게 드러냅니다.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Red Line Report는 이러한 문제의식에서 출발하여, 기사 제목을 사회적 감수성의 기준으로 삼아 언론이 스스로 개선할 수 있는 도구를 제공합니다.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ 주요 기능
 
-## Learn More
+### 개발중
+- **젠더 감수성 분석**: 기사 제목의 젠더 감수성을 측정하고 개선점 제안
+- **실시간 점수 산출**: 0-100점 척도로 감수성 수준 평가
 
-To learn more about Next.js, take a look at the following resources:
+### 향후 계획
+- **지역 혐오 감지**: 지역차별적 표현 분석 기능
+- **외국인 혐오 감지**: 외국인 차별적 언어 분석 기능
+- **종합 분석 리포트**: 다양한 차별 요소를 종합한 분석 결과
+- **다국어 지원**: 한글 뿐만 아니라 외국어 기사 제목도 분석 예정
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ 기술 스택
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Frontend**: Next.js, TypeScript, TailwindCSS
+- **Deployment**: Vercel (예정)
+- **AI/ML**: Python (크롤링 및 AI 모델)
 
-## Deploy on Vercel
+## 📊 분석 기준
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+현재 젠더 감수성 분석은 다음 기준으로 평가됩니다:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- (업데이트 예정)
+
+### 점수 체계
+
+- (업데이트 예정)
+
+## 🚦 프로젝트 배경
+
+한국언론진흥재단의 《인터넷신문 기사심의규정》 제6조 '제목의 원칙'은 다음과 같이 명시되어 있습니다:
+
+> "기사의 제목은 기사의 요약적 내용이나 핵심적 내용을 대표해야 하며, 기사 내용과 다르게 허위, 과장, 비방, 선정적 표현을 사용하지 않도록 한다."
+
+규정은 놀라울 만큼 단순합니다. 기사 제목은 독자가 기사를 클릭하기 전에 가장 먼저 마주하는 문구임에도 불구하고, 제목 작성 원칙은 지나치게 간략합니다. 언론이 사회적 책임을 다하기에는 턱없이 부족한 수준입니다.
+
+개인이 할 수 있는 대응은 제한적입니다. SNS에 글을 올리면 지인들만 볼 뿐이고, 직접 언론사에 항의 메일을 보내 제목이 수정된 경험도 있었지만, 이는 근본적인 변화를 만들지 못합니다.
+
+이런 배경에서 시작된 것이 **Red Line Report**입니다.
+
+## 🎯 향후 계획
+
+1. **AI 모델 고도화**: 더 정교한 언어 분석을 위한 딥러닝 모델 개발
+2. **분석 영역 확장**: 지역차별, 외국인혐오, 연령차별 등 다양한 차별 요소 분석
+3. **실시간 모니터링**: 주요 언론사 기사 제목 실시간 분석 시스템
+4. **언론사 대시보드**: 언론사별 감수성 점수 트렌드 분석
+5. **API 제공**: 외부 서비스에서 활용 가능한 분석 API 개발
+
+## 📄 라이선스
+
+이 프로젝트는 MIT 라이선스 하에 배포됩니다.
+
+## 📞 문의
+
+프로젝트에 대한 문의사항이나 제안사항이 있으시면 언제든 연락해 주세요.
+
+---
+
+**Red Line Report** - 더 나은 미디어 환경을 위한 작은 발걸음
